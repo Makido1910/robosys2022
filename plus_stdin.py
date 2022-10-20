@@ -2,8 +2,11 @@
 
 import sys
 
-x = 0.0
-for n in sys.stdin:
-    x += float(n)
+ans = 0
+for line in sys.stdin:
+    try:
+        ans += int(line)
+    except:
+        ans += float(line)
 
-print(x)
+print(ans)
