@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 # SPDX-FileCopyrightText: 2022 Yusuke Makido
+# SPDX-License-Identifier: BSD-3-Clause
+
 import sys
 
 ans = 0
