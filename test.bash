@@ -1,8 +1,20 @@
 #!/bin/bash
+#SPDX-FileCopyrightText: 2022 Yusuke Makido
+#SPDX-License-Identifier: BSD-3-Clause
 
+ng () {
+	echo ${1}行目が違うよ
+	res=1
+}
+
+res=0
+
+### I/O TEST ###
 out=$(seq 5 | ./plus)
+[ "${out}" = 15 ] || ng ${LINENO}
 
-[ "${out}" = 15 ]
+[ "$res" = 0 ] && echo ok
+exit $res
 
 
 
