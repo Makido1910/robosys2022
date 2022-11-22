@@ -4,11 +4,20 @@
 
 import sys
 
-ans = 0
+ansA = 0
 for line in sys.stdin:
     try:
-        ans += int(line)
+        ansA += int(line)
     except:
-        ans += float(line)
+        ansA += float(line)
 
-print(ans)
+print(ansA)
+
+#ansB = 1
+#for line in sys.stdin:
+#    try:
+#        ansB *= int(line)
+#    except:
+#        ansB *= float(line)
+
+#print(ansB)
