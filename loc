@@ -1,0 +1,43 @@
+#!/usr/bin/python3 
+# SPDX-FileCopyrightText: 2022 Yusuke Makido
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+a = 0.0
+b = 0.0
+c = 0.0
+n = 0.0
+
+x = [1, 2, 3]
+for i in x:
+    for line in sys.stdin:
+        if i == 1:
+            try:
+                a = int(line)
+                break
+            except:
+                a = float(line)
+                break
+        elif i == 2:
+            try:
+                b = int(line)
+                break
+            except:
+                b = float(line)
+                break
+        else:
+            try:
+                c = int(line)
+                break
+            except:
+                c = float(line)
+                break
+
+
+
+n = (a**2 + b**2 - c**2)
+m = 2 * a * b
+y = n / m
+print(a, b, c)
+print(n, m)
+print(y)
