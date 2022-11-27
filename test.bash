@@ -39,10 +39,6 @@ out=$(echo | ./mul)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-out=$(echo あ い う > nums | cat nums | tr ' ' '\n' | ./loc)
-[ "$?" = 1 ] || ng ${LINENO}
-[ "${out}" = "" ] || ng ${LINENO}
-
 
 
 [ "$res" = 0 ] && echo ok
