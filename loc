@@ -38,6 +38,5 @@ for i in x:
 n = (a**2 + b**2 - c**2)
 m = 2 * a * b
 y = n / m
-print(a, b, c)
-print(n, m)
+
 print(y)
