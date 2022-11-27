@@ -19,9 +19,6 @@ out=$(seq 5 | ./mul)
 out=$(echo 5 4 3 > nums | cat nums | tr ' ' '\n' | ./loc)
 [ "${out}" = 0.8 ] || ng ${LINENO}
 
-out=$(echo 3 4 5 > nums | cat nums | tr ' ' '\n' | ./loc)
-[ "${out}" = 0.0 ] || ng ${LINENO}
-
 ### STRANGE INPUT ###
 out=$(echo あ | ./plus)
 [ "$?" = 1 ] || ng ${LINENO}
@@ -38,8 +35,6 @@ out=$(echo あ | ./mul)
 out=$(echo | ./mul)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
-
-
 
 [ "$res" = 0 ] && echo ok
 exit $res
