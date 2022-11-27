@@ -13,6 +13,10 @@ res=0
 out=$(seq 5 | ./plus)
 [ "${out}" = 15 ] || ng ${LINENO}
 
+out=$(echo 5 4 3 >nums | cat nums | tr ' ' '\n' | ./loc)
+[ "${out}" = 0.8 ] || ng ${LINENO}
+
+
 ### STRANGE INPUT ###
 out=$(echo あ | ./plus)
 [ "$?" = 1 ] || ng ${LINENO}
