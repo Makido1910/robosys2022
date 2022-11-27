@@ -35,14 +35,6 @@ out=$(echo | ./plus)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-out=$(echo 5 | > nums | cat nums | tr ' ' '\n' | ./loc)
-[ "$?" = 1 ] || ng ${LINENO}
-[ "${out}" = "" ] || ng ${LINENO}
-
-out=$(echo 5 4 | > nums | cat nums | tr ' ' '\n' | ./loc)
-[ "$?" = 1 ] || ng ${LINENO}
-[ "${out}" = "" ] || ng ${LINENO}
-
 out=$(echo あ い う > nums | cat nums | tr ' ' '\n' | ./loc)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
@@ -50,11 +42,6 @@ out=$(echo あ い う > nums | cat nums | tr ' ' '\n' | ./loc)
 out=$(echo a b c > nums | cat nums | tr ' ' '\n' | ./loc)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
-
-out=$(echo | > nums | cat nums | tr ' ' '\n' | ./loc)
-[ "$?" = 1 ] || ng ${LINENO}
-[ "${out}" = "" ] || ng ${LINENO}
-
 
 
 
