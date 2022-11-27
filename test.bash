@@ -16,15 +16,54 @@ out=$(seq 5 | ./plus)
 out=$(echo 5 4 3 >nums | cat nums | tr ' ' '\n' | ./loc)
 [ "${out}" = 0.8 ] || ng ${LINENO}
 
+out=$(echo 3 4 5 >nums | cat nums | tr ' ' '\n' | ./loc)
+[ "${out}" = 0.0 ] || ng ${LINENO}
 
 ### STRANGE INPUT ###
 out=$(echo あ | ./plus)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
+out=$(echo a | ./plus)
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
 out=$(echo | ./plus)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
+
+out=$(echo 5 4 3 2 1>nums | cat nums | tr ' ' '\n' | ./loc)
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(echo 5 4 3 2>nums | cat nums | tr ' ' '\n' | ./loc)
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(echo 5 4 >nums | cat nums | tr ' ' '\n' | ./loc)
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(echo 5 >nums | cat nums | tr ' ' '\n' | ./loc)
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(echo あ い う >nums | cat nums | tr ' ' '\n' | ./loc)
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(echo a b c >nums | cat nums | tr ' ' '\n' | ./loc)
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(echo | >nums | cat nums | tr ' ' '\n' | ./loc)
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+
+
+
+
 
 [ "$res" = 0 ] && echo ok
 exit $res
