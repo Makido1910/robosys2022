@@ -13,28 +13,28 @@ cd robosys2022
 
 #plusを実行する(入力された数字をすべて足す)
 
-echo a b c ... > numA                  #echoの後に入力した数列をnumAという変数に代入する
+echo a b c ... > numA               #echoの後に入力した数列をnumAという変数に代入する
 
-cat numA |tr ' ' '\n' | ./plus       　#numAに代入された数列を縦一列にし、プログラムを実行する
+cat numA |tr ' ' '\n' | ./plus      #numAに代入された数列を縦一列にし、プログラムを実行する
 
 ##または##
 
-seq n | ./plus                         #1からnまでの値をすべて足す
+seq n | ./plus                      #1からnまでの値をすべて足す
 
 
 #mulを実行する(入力された数字をすべて掛ける)
 
-echo a b c ... > numB                  #plusと同様
+echo a b c ... > numB               #plusと同様
 
 cat numB |tr ' ' '\n' | ./mul
 
 ##または##
 
-seq n | ./mul                         #1からnまでの値をすべて掛ける
+seq n | ./mul                       #1からnまでの値をすべて掛ける
 
 #locを実行する(三角形の三辺をa,b,cとしたとき、cの対角のcosの値を求める)
 
-echo a b c ... > numC                  #plusと同様
+echo a b c > numC                   #plusと同様(3つの数字のみ)
 
 cat numB |tr ' ' '\n' | ./loc
 
