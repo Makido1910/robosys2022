@@ -13,6 +13,9 @@ res=0
 out=$(seq 5 | ./plus)
 [ "${out}" = 15 ] || ng ${LINENO}
 
+out=$(seq 5 | ./mul)
+[ "${out}" = 120 ] || ng ${LINENO}
+
 out=$(echo 5 4 3 > nums | cat nums | tr ' ' '\n' | ./loc)
 [ "${out}" = 0.8 ] || ng ${LINENO}
 
@@ -32,7 +35,7 @@ out=$(echo | ./plus)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-out=$(echo 5 | | > nums | cat nums | tr ' ' '\n' | ./loc)
+out=$(echo 5 | > nums | cat nums | tr ' ' '\n' | ./loc)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
