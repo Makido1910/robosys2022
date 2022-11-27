@@ -27,19 +27,19 @@ out=$(echo あ | ./plus)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-out=$(echo a | ./plus)
-[ "$?" = 1 ] || ng ${LINENO}
-[ "${out}" = "" ] || ng ${LINENO}
-
 out=$(echo | ./plus)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-out=$(echo あ い う > nums | cat nums | tr ' ' '\n' | ./loc)
+out=$(echo あ | ./mul)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
-out=$(echo a b c > nums | cat nums | tr ' ' '\n' | ./loc)
+out=$(echo | ./mul)
+[ "$?" = 1 ] || ng ${LINENO}
+[ "${out}" = "" ] || ng ${LINENO}
+
+out=$(echo あ い う > nums | cat nums | tr ' ' '\n' | ./loc)
 [ "$?" = 1 ] || ng ${LINENO}
 [ "${out}" = "" ] || ng ${LINENO}
 
