@@ -1,7 +1,7 @@
 ![test](https://github.com/Makido1910/robosys2022/actions/workflows/test.yml/badge.svg)
 
 #ダウンロード、プログラム実行方法
-'''
+```
 
 #ダウンロード方法
 
@@ -39,7 +39,7 @@ echo a b c ... > numC                  #plusと同様
 cat numB |tr ' ' '\n' | ./loc
 
 
-'''
+```
 
 #テスト環境
 * Linux
