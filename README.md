@@ -12,25 +12,36 @@
 * ダウンロード方法
 
 ```
-git clone https://github.com/Makido1910/robosys2022
+$ git clone https://github.com/Makido1910/robosys2022
 ```
 
 * robosys2022ディレクトリに移動する
 
 ```
-cd robosys2022
+$ cd robosys2022
+
 ```
 
 * plusを実行する
 
 ```
-echo a b c ... > numA               #echoの後に入力した数列をnumAというファイルに代入する
+$ echo a b c ... > numA               #echoの後に入力した数列をnumAというファイルに代入する
 
-cat numA |tr ' ' '\n' | ./plus      #numAに代入された数列を縦一列にし、プログラムを実行する
+$ cat numA                            #横一列の数列になっていることを確認
+a b c ...
+
+$ cat numA |tr ' ' '\n'               #numAに代入された数列を縦一列にする
+a
+b
+c
+...
+
+$ cat numA |tr ' ' '\n' | ./plus      #コマンドの実行
+
 
 ##または##
 
-seq n | ./plus                      #1からnまでの値をすべて足す
+$ seq n | ./plus                      #1からnまでの値をすべて足す
 ```
 
 * mulを実行する
