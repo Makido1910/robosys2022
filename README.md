@@ -43,7 +43,7 @@ seq n | ./mul                       #1からnまでの値をすべて掛ける
 ```
 echo a b c > numC                   #plusと同様(3つの数字のみ)
 
-cat numB |tr ' ' '\n' | ./loc
+cat numC |tr ' ' '\n' | ./loc
 ```
 
 # テスト環境
