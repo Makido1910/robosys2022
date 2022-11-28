@@ -18,7 +18,7 @@ $ git clone https://github.com/Makido1910/robosys2022
 * robosys2022ディレクトリに移動する
 
 ```
-$ cd robosys2022
+$ cd robosys2022/
 ```
 
 * plusを実行する
