@@ -48,7 +48,7 @@ $ seq 5 | ./plus                      #1からnまでの値をすべて足す
 * mulを実行する
 
 ```
-echo 1 2 3 4 5 > numB               #plusと同様
+$ echo 1 2 3 4 5 > numB               #plusと同様
 
 $ cat numB |tr ' ' '\n'
 1
@@ -62,24 +62,24 @@ $ cat numB |tr ' ' '\n' | ./mul
 
 ##または##
 
-seq n | ./mul                       #1からnまでの値をすべて掛ける
+$ seq n | ./mul                       #1からnまでの値をすべて掛ける
 120
 ```
 
 * locを実行する
 
 ```
-echo 5 4 3 > numC                   #plusと同様(3つの数字のみ)
+$ echo 5 4 3 > numC                   #plusと同様(3つの数字のみ)
 
-cat numC
+$ cat numC
 5 4 3
 
-cat numC |tr ' ' '\n'
+$ cat numC |tr ' ' '\n'
 5
 4
 3
 
-cat numC |tr ' ' '\n' | ./loc
+$ cat numC |tr ' ' '\n' | ./loc
 0.8
 ```
 
