@@ -4,8 +4,6 @@
   * plus:入力された数字をすべて足す
   * mul:入力された数字をすべて掛ける
   * loc:三角形の三辺をa,b,cとしたとき、cの対角のcosの値を求める
-* テスト環境
-* ライセンス
  
 ![test](https://github.com/Makido1910/robosys2022/actions/workflows/test.yml/badge.svg)
 
