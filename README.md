@@ -1,3 +1,12 @@
+# 計算プログラム
+
+* plus mul loc 3つのプログラムのダウンロードと実行の方法
+  * plus:入力された数字をすべて足す
+  * mul:入力された数字をすべて掛ける
+  * loc:三角形の三辺をa,b,cとしたとき、cの対角のcosの値を求める
+* テスト環境
+* ライセンス
+ 
 ![test](https://github.com/Makido1910/robosys2022/actions/workflows/test.yml/badge.svg)
 
 # ダウンロード、プログラム実行方法
@@ -14,10 +23,10 @@ git clone https://github.com/Makido1910/robosys2022
 cd robosys2022
 ```
 
-* plusを実行する(入力された数字をすべて足す)
+* plusを実行する
 
 ```
-echo a b c ... > numA               #echoの後に入力した数列をnumAという変数に代入する
+echo a b c ... > numA               #echoの後に入力した数列をnumAというファイルに代入する
 
 cat numA |tr ' ' '\n' | ./plus      #numAに代入された数列を縦一列にし、プログラムを実行する
 
@@ -26,7 +35,7 @@ cat numA |tr ' ' '\n' | ./plus      #numAに代入された数列を縦一列に
 seq n | ./plus                      #1からnまでの値をすべて足す
 ```
 
-* mulを実行する(入力された数字をすべて掛ける)
+* mulを実行する
 
 ```
 echo a b c ... > numB               #plusと同様
@@ -38,7 +47,7 @@ cat numB |tr ' ' '\n' | ./mul
 seq n | ./mul                       #1からnまでの値をすべて掛ける
 ```
 
-* locを実行する(三角形の三辺をa,b,cとしたとき、cの対角のcosの値を求める)
+* locを実行する
 
 ```
 echo a b c > numC                   #plusと同様(3つの数字のみ)
@@ -47,7 +56,6 @@ cat numC |tr ' ' '\n' | ./loc
 ```
 
 # テスト環境
-* Linux
 * Ubuntu 22.04
 * python
   * テスト済: 3.7～3.10
