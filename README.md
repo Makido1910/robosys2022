@@ -3,7 +3,7 @@
 * plus mul loc 3つのプログラムのダウンロードと実行の方法
   * plus:入力された数字をすべて足す
   * mul:入力された数字をすべて掛ける
-  * loc:三角形の三辺をa,b,cとしたとき、cの対角のcosの値を求める
+  * loc:三角形の三辺をa,b,cとしたとき、cの対角のcosの値を求める(余弦定理)
  
 ![test](https://github.com/Makido1910/robosys2022/actions/workflows/test.yml/badge.svg)
 
