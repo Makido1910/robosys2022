@@ -84,7 +84,7 @@ $ cat numC |tr ' ' '\n' | ./loc
 ```
 
 # テスト環境
-* Ubuntu 22.04
+* Ubuntu 22.04.1 LTS
 * python
   * テスト済: 3.7～3.10
 
